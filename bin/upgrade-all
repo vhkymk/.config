@@ -408,8 +408,8 @@ def main():
 
     schedule_npm_updates(runner)
     # runner.add_task("Homebrew Update", "brew update && brew upgrade --greedy")
-    # runner.add_task("Config Git Pull", "cd ~/.config && git pull")
-    # runner.add_task("Neovim Config Git Pull", "cd ~/.config/nvim && git pull")
+    runner.add_task("Config Git Pull", "cd ~/.config && git pull")
+    runner.add_task("Neovim Config Git Pull", "cd ~/.config/nvim && git pull")
     # runner.add_task("SConfig Git Pull", "cd ~/.sconfig && git pull")
     # runner.add_task("Agent Tracker Build", "cd ~/.config/agent-tracker && ./install.sh")
 
