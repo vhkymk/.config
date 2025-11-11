@@ -1,19 +1,28 @@
+# 基础环境（先加载）
 zmodule environment
-zmodule git
-zmodule input
 zmodule termtitle
 zmodule utility
+
+# 补全与语法（依赖基础环境）
 zmodule completion
+zmodule zsh-users/zsh-completions
+# 语法高亮应在补全之后
+zmodule zdharma-continuum/fast-syntax-highlighting
+
+# 交互增强（依赖补全/语法）
+zmodule zsh-users/zsh-autosuggestions
+zmodule zsh-users/zsh-history-substring-search
+zmodule hlissner/zsh-autopair
+
+# 工具类（无强依赖）
+zmodule git
 zmodule git-info
 zmodule duration-info
 zmodule prompt-pwd
 zmodule magicmace
-zmodule zsh-users/zsh-completions
-zmodule zsh-users/zsh-autosuggestions
-zmodule zsh-users/zsh-history-substring-search
-zmodule zdharma-continuum/fast-syntax-highlighting
 zmodule supercrabtree/k
-zmodule hlissner/zsh-autopair
-zmodule pabloariasal/zfm
 zmodule agkozak/zsh-z
+zmodule pabloariasal/zfm
+
+# 最后加载 fzf-tab（依赖补全系统）
 zmodule Aloxaf/fzf-tab
